@@ -11,6 +11,7 @@ gem 'jquery-rails', '3.1.1'
 gem 'turbolinks', '2.2.2'
 gem 'jbuilder', '2.1.3'
 gem 'spring', '1.1.3', group: :development
+gem 'haml-rails', '0.5.3'
 
 group :development, :test do
   gem 'rspec-rails', '3.0.2'
