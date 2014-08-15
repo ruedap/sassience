@@ -3,6 +3,7 @@ class SheetsController < ApplicationController
   def new
     @sheet = Sheet.new
     @converted_sheet = converted_sheet
+    @sheet.original_code = @converted_sheet.converted_code if @converted_sheet
   end
 
   # POST /sheets

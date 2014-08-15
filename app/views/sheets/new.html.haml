@@ -1,20 +1,9 @@
 %h1= session[:converted_sheet_id]
 - unless @converted_sheet
-  = form_for @sheet do |f|
-    - if @sheet.errors.any?
-      #error_explanation
-        %h2= "#{pluralize(@sheet.errors.count, "error")} prohibited this sheet from being saved:"
-        %ul
-          - @sheet.errors.full_messages.each do |msg|
-            %li= msg
-
-    .field
-      = f.label :original_code
-      = f.text_area :original_code
-    .actions
-      = f.submit 'Convert'
+  = render(partial: 'form', locals: { sheet: @sheet })
 - else
   %h2= @converted_sheet.id
   %pre= @converted_sheet.original_code
   %h2= @converted_sheet.converted_type
   %pre= @converted_sheet.converted_code.to_s
+  = render(partial: 'form', locals: { sheet: @sheet })
