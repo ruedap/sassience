@@ -14,5 +14,7 @@
     .actions
       = f.submit 'Convert'
 - else
-  %p= @converted_sheet.id
-  %p= @converted_sheet.original_code
+  %h2= @converted_sheet.id
+  %pre= @converted_sheet.original_code
+  %h2= @converted_sheet.converted_type
+  %pre= @converted_sheet.converted_code.to_s

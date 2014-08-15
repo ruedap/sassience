@@ -8,6 +8,7 @@ class SheetsController < ApplicationController
   # POST /sheets
   def create
     @sheet = Sheet.new(sheet_params)
+    @sheet.convert
 
     if @sheet.save
       session[:converted_sheet_id] = @sheet.id
