@@ -11,9 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140815131015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "sheets", force: true do |t|
+    t.text     "original_code"
+    t.text     "converted_code"
+    t.integer  "converted_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "style_sheets", force: true do |t|
+    t.text     "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
