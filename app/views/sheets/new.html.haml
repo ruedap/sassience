@@ -1,13 +1,18 @@
-= form_for @sheet do |f|
-  - if @sheet.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@sheet.errors.count, "error")} prohibited this sheet from being saved:"
-      %ul
-        - @sheet.errors.full_messages.each do |msg|
-          %li= msg
+%h1= session[:converted_sheet_id]
+- unless @converted_sheet
+  = form_for @sheet do |f|
+    - if @sheet.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@sheet.errors.count, "error")} prohibited this sheet from being saved:"
+        %ul
+          - @sheet.errors.full_messages.each do |msg|
+            %li= msg
 
-  .field
-    = f.label :original_code
-    = f.text_area :original_code
-  .actions
-    = f.submit 'Convert'
+    .field
+      = f.label :original_code
+      = f.text_area :original_code
+    .actions
+      = f.submit 'Convert'
+- else
+  %p= @converted_sheet.id
+  %p= @converted_sheet.original_code
