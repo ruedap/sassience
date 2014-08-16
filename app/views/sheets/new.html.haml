@@ -1,4 +1,3 @@
-%h1= session[:converted_sheet_id]
 - unless @converted_sheet
   = render(partial: 'form', locals: { sheet: @sheet })
 - else

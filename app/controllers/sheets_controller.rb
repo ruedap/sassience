@@ -9,6 +9,7 @@ class SheetsController < ApplicationController
   # POST /sheets
   def create
     @sheet = Sheet.new(sheet_params)
+    @sheet.detect_convert_type(params[:convert_type_1])
     @sheet.convert
 
     if @sheet.save
@@ -23,7 +24,11 @@ class SheetsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def sheet_params
-    params.require(:sheet).permit(:original_code)
+    params.require(:sheet).permit(
+      :original_code,
+      :convert_type_1,
+      :convert_type_2
+    )
   end
 
   def converted_sheet

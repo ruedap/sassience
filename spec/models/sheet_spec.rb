@@ -13,4 +13,20 @@ RSpec.describe Sheet, type: :model do
     end
   end
 
+  describe '.detect_convert_type' do
+    context 'when argument is nil' do
+      it 'returns 2' do
+        sheet = Sheet.new
+        expect(sheet.detect_convert_type(nil)).to eq(2)
+      end
+    end
+
+    context 'when argument is not nil' do
+      it 'returns 1' do
+        sheet = Sheet.new
+        expect(sheet.detect_convert_type('')).to eq(1)
+      end
+    end
+  end
+
 end
