@@ -25,6 +25,26 @@ RSpec.describe Sheet, type: :model do
     end
   end
 
+  describe '.converted_type_name' do
+    context 'when `converted_type` is 1' do
+      it 'returns `:expanded`' do
+        sheet = Sheet.new
+        sheet.converted_type = 1
+
+        expect(sheet.converted_type_name).to eq(:expanded)
+      end
+    end
+
+    context 'when `converted_type` is 2' do
+      it 'returns `:compact`' do
+        sheet = Sheet.new
+        sheet.converted_type = 2
+
+        expect(sheet.converted_type_name).to eq(:compact)
+      end
+    end
+  end
+
   describe '.detect_convert_type' do
     context 'when argument is nil' do
       it 'returns 2' do

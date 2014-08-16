@@ -5,9 +5,13 @@ class Sheet < ActiveRecord::Base
     sass_code = Sass::Engine.new(
       original_code,
       syntax: :scss,
-      style: :compact
+      style: converted_type_name
     )
     self.converted_code = sass_code.render
+  end
+
+  def converted_type_name
+    converted_type == 1 ? :expanded : :compact
   end
 
   def detect_convert_type(convert_type_1)
