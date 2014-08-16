@@ -1,5 +1,7 @@
 class Sheet < ActiveRecord::Base
   def convert
+    return unless original_code
+
     sass_code = Sass::Engine.new(
       original_code,
       syntax: :scss,
