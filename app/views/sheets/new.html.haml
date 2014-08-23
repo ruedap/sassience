@@ -2,7 +2,7 @@
   = render(partial: 'form', locals: { sheet: @sheet })
 - else
   %h2= @converted_sheet.id
-  %pre= @converted_sheet.original_code
+  -# %pre= @converted_sheet.original_code
   %h2= @converted_sheet.converted_type_name
-  %pre= @converted_sheet.converted_code
+  -# %pre= @converted_sheet.converted_code
   = render(partial: 'form', locals: { sheet: @sheet })
