@@ -1,13 +1,13 @@
 GIT
   remote: git://github.com/rails/sass-rails.git
-  revision: 57ec3397ff99655890895df29a7bf3f683410256
-  ref: 57ec3397ff99655890895df29a7bf3f683410256
+  revision: 423178729e7b84addcee78b33891644b1fc1705b
+  ref: 423178729e7b84addcee78b33891644b1fc1705b
   specs:
-    sass-rails (5.0.0.dev)
+    sass-rails (5.0.0.beta1)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.2)
       sprockets (~> 2.12)
-      sprockets-rails (~> 2.0)
+      sprockets-rails (>= 2.0, < 4.0)
 
 GEM
   remote: https://rubygems.org/
