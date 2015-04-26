@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta(content="text/html; charset=UTF-8" http-equiv="Content-Type")
+    %meta(property='og:title' content='SASSIENCE ～ 世界が嫉妬するCSSへ')
+    %meta(property='og:url' content='http://sassience.com/')
+    %meta(property='og:image' content='http://sassience.com/images/logo_facebook.png')
+    %meta(property='og:type' content='website')
+    %meta(property='og:description' content='SASSIENCE（サシエンス）は、CSSのインデントを綺麗にするサービスです。')
+    %meta(property='og:site_name' content='SASSIENCE ～ 世界が嫉妬するCSSへ')
+    %meta(property='fb:admins' content='100000124028900')
+    %title SASSIENCE
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %header
+      %h1 SASSIENCE
+    %main
+      = yield
