@@ -4,12 +4,12 @@ RSpec.describe Sheet, type: :model do
 
   describe '.convert' do
     context 'when `original_code` is empty' do
-      it 'does not convert the original code' do
+      it 'convert the example code' do
         params = {}
         sheet = Sheet.new(params)
         sheet.convert
 
-        expect(sheet.converted_code).to be_nil
+        expect(sheet.converted_code).to eq(described_class.new.example_code)
       end
     end
 
@@ -18,6 +18,7 @@ RSpec.describe Sheet, type: :model do
         params = {}
         params[:original_code] = '.hoge{width:100%;height:30px}'
         sheet = Sheet.new(params)
+        sheet.detect_convert_type(nil)
         sheet.convert
 
         expect(sheet.converted_code).to eq(".hoge { width: 100%; height: 30px; }\n")
