@@ -62,4 +62,26 @@ RSpec.describe Sheet, type: :model do
     end
   end
 
+  describe '.remove_blank_line' do
+    it 'returns css code' do
+      sheet = Sheet.new
+      code = <<-EOS
+
+
+.red { color: red; }
+
+.green { color: green; }
+
+
+.blue { color: blue; }
+
+.pink { color: pink; }
+
+
+      EOS
+
+      expected = "\n\n.red { color: red; }\n.green { color: green; }\n\n\n.blue { color: blue; }\n.pink { color: pink; }\n\n\n"
+      expect(sheet.remove_blank_line(code)).to eq(expected)
+    end
+  end
 end
