@@ -6,6 +6,7 @@ RSpec.describe Sheet, type: :model do
     context 'when `original_code` is empty' do
       it 'convert the example code' do
         params = {}
+        params[:original_code] = ''
         sheet = Sheet.new(params)
         sheet.convert
 

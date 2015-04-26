@@ -1,6 +1,6 @@
 class Sheet < ActiveRecord::Base
   def convert
-    base_code = original_code ? original_code : example_code
+    base_code = original_code.present? ? original_code : example_code
 
     sass_code = Sass::Engine.new(
       base_code,
