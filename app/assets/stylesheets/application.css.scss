@@ -3,6 +3,10 @@
 
 $font-family-mono: Consolas, "Liberation Mono", Courier, "Hiragino Kaku Gothic ProN", Meiryo, monospace;
 
+$width-main: 900px;
+$width-main-narrow: 860px;
+
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -23,7 +27,7 @@ html {
 
 .GlobalHeader {
   margin: 30px auto 25px;
-  width: 860px;
+  width: $width-main-narrow;
 }
 
 .GlobalHeader-heading {
@@ -65,8 +69,8 @@ html {
 }
 
 .Main {
-  margin: 0 auto;
-  width: 900px;
+  margin: 0 auto 30px;
+  width: $width-main;
 }
 
 @mixin placeholder-color($color) {
@@ -104,7 +108,7 @@ html {
 }
 
 .SheetForm-buttonGroup {
-  width: 860px;
+  width: $width-main-narrow;
   margin: 30px auto 20px;
 }
 
@@ -130,4 +134,9 @@ html {
   img {
     vertical-align: text-bottom;
   }
+}
+
+.SheetForm-buttonCaption {
+  width: $width-main-narrow;
+  text-align: center;
 }
