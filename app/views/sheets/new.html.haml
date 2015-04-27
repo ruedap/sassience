@@ -15,4 +15,4 @@
       = preserve do
         - @converted_sheet.converted_code.each_line do |line|
           %span.SheetPreview-line>= line
-  = render(partial: 'form', locals: { sheet: @sheet, form_modifier: '' })
+  = render(partial: 'form', locals: { sheet: @sheet, form_modifier: 'SheetForm--converted' })

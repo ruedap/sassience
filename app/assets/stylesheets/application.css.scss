@@ -98,7 +98,6 @@ html {
   @extend %SheetForm-textarea;
   @include placeholder-color($color-pink);
   display: block;
-  height: 460px;
   width: 100%;
 
   &:focus {
@@ -112,6 +111,13 @@ html {
     background-image: image-url("form_bg.png");
     background-position: center center;
     background-repeat: no-repeat;
+    height: 460px;
+  }
+}
+
+.SheetForm--converted {
+  .SheetForm-textarea {
+    display: none;
   }
 }
 
