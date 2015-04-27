@@ -1,25 +1,29 @@
 @import "vendor/normalize";
 @import "emma";
 
-.sheet-form {
-  &__original-code {
-    width: 800px;
-    min-height: 500px;
-  }
+$font-family-mono: Consolas, "Liberation Mono", Courier, "Hiragino Kaku Gothic ProN", Meiryo, monospace;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 .Page {
   background-color: #f6ea8d;
   background-image: image-url("bg.png");
   color: #382c03;
-  margin: 0 auto;
-  max-width: 900px;
 }
 
 
 .GlobalHeader {
   margin: 30px auto 25px;
-  max-width: 860px;
+  width: 860px;
 }
 
 .GlobalHeader-heading {
@@ -57,5 +61,44 @@
 
   &:nth-of-type(3) {
     background: image-url("caption03.png") 0 0;
+  }
+}
+
+.Main {
+  margin: 0 auto;
+  width: 900px;
+}
+
+@mixin placeholder-color($color) {
+     &:-moz-placeholder {
+         color: $color;
+     }
+     &::-webkit-input-placeholder {
+         color: $color;
+     }
+ }
+
+.SheetForm-textarea {
+  @include placeholder-color(#df7e96);
+  border-radius: 20px;
+  border-style: none;
+  display: block;
+  font-family: $font-family-mono;
+  font-size: 13px;
+  height: 460px;
+  padding: 20px;
+  width: 100%;
+
+  &:focus {
+    @include placeholder-color(#fff);
+    outline: 0;
+  }
+}
+
+.SheetForm--new {
+  .SheetForm-textarea {
+    background-image: image-url("form_bg.png");
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
