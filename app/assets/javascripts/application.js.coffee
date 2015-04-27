@@ -8,10 +8,10 @@ $ ->
 
   $('.SheetForm-textarea').height($('.SheetPreview').height())
   $('.SheetResult-button').on 'click', ->
-    if $('.SheetForm-textarea').css('display') is 'none'
+    if $('.SheetForm-textareaOuter').css('display') is 'none'
       $('.SheetPreview').hide()
-      $('.SheetForm-textarea').fadeIn()
+      $('.SheetForm-textareaOuter').fadeIn()
       $('.SheetForm-textarea').focus().select()
     else
       $('.SheetPreview').fadeIn()
-      $('.SheetForm-textarea').hide()
+      $('.SheetForm-textareaOuter').hide()

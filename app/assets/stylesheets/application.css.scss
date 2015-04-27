@@ -85,24 +85,27 @@ html {
      }
  }
 
-%SheetForm-textarea {
+%SheetForm-style {
   background-color: #fff;
   border-radius: 20px;
-  border-style: none;
   font-family: $font-family-mono;
   font-size: 13px;
   padding: 20px;
 }
 
+.SheetForm-textareaOuter {
+  @extend %SheetForm-style;
+}
+
 .SheetForm-textarea {
-  @extend %SheetForm-textarea;
   @include placeholder-color($color-pink);
+  border-style: none;
   display: block;
+  padding: 4px;
   width: 100%;
 
   &:focus {
     @include placeholder-color(#fff);
-    outline: 0;
   }
 }
 
@@ -116,7 +119,7 @@ html {
 }
 
 .SheetForm--converted {
-  .SheetForm-textarea {
+  .SheetForm-textareaOuter {
     display: none;
   }
 }
@@ -181,7 +184,7 @@ html {
 }
 
 .SheetPreview-code {
-  @extend %SheetForm-textarea;
+  @extend %SheetForm-style;
   display: block;
 }
 
