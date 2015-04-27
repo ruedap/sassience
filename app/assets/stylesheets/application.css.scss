@@ -149,6 +149,31 @@ html {
   text-align: center;
 }
 
+.SheetResult {
+  width: $width-main-narrow;
+  margin: 0 auto 20px;
+}
+
+.SheetResult-button {
+  background-position: 0 0;
+  display: block;
+  height: 60px;
+  margin: 0;
+  width: 370px;
+
+  &:hover {
+    background-position: 0 60px;
+  }
+}
+
+.SheetResult-button--type1 {
+  background: image-url("created_css_copy_button01.png")
+}
+
+.SheetResult-button--type2 {
+  background: image-url("created_css_copy_button02.png")
+}
+
 .SheetPreview-code {
   @extend %SheetForm-textarea;
   display: block;

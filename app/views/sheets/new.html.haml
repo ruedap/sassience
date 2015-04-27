@@ -1,9 +1,15 @@
 - unless @converted_sheet
   = render(partial: 'form', locals: { sheet: @sheet, form_modifier: 'SheetForm--new' })
 - else
-  %h2= @converted_sheet.id
-  -# %pre= @converted_sheet.original_code
-  %h2= @converted_sheet.converted_type_name
+  .SheetResult.u-cf
+    .u-fl-l
+      .u-mb-sm
+        =image_tag('created_result_ok.png')
+      .u-mb-sm<>
+        =image_tag('created_result_type.png')
+        =image_tag("created_result_type_0#{@converted_sheet.converted_type}.png")
+    .u-fl-r
+      %a(class="SheetResult-button SheetResult-button--type#{@converted_sheet.converted_type} u-tehi" href='javascript:void(0)' alt='CSSをコピーまたは編集' title='CSSをコピーまたは編集') CSSをコピーまたは編集
   %pre.SheetPreview
     %code.SheetPreview-code
       = preserve do
