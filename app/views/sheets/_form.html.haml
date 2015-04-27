@@ -8,6 +8,8 @@
 
   .SheetForm-textareaOuter
     = f.text_area :original_code, class: 'SheetForm-textarea', placeholder: 'ここに綺麗にしたいCSSをペースト （未入力で下のタイプを選択すると、変換サンプルをご覧いただけます）'
-  .actions
-    = f.submit 'Convert 1', name: 'convert_type_1'
-    = f.submit 'Convert 2', name: 'convert_type_2'
+  .SheetForm-buttonGroup.u-cf
+    = f.button name: 'convert_type_1', class: 'SheetForm-button u-fl-l' do
+      = image_tag('button01.png', alt: 'しっとりリッチタイプ')
+    = f.button name: 'convert_type_2', class: 'SheetForm-button u-fl-r' do
+      = image_tag('button02.png', alt: '軽やかスムースタイプ')

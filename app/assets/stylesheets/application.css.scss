@@ -102,3 +102,32 @@ html {
     background-repeat: no-repeat;
   }
 }
+
+.SheetForm-buttonGroup {
+  width: 860px;
+  margin: 30px auto 20px;
+}
+
+.SheetForm-button {
+  background-position: 0% 0%;
+  padding: 0;
+  border: 0;
+  appearance: none;
+
+  &:hover {
+    background-position: 0% 100%;
+    outline: 0;
+  }
+
+  &:nth-of-type(1) {
+    background-image: image-url("button01_over_bg.png");
+  }
+
+  &:nth-of-type(2) {
+    background-image: image-url("button02_over_bg.png");
+  }
+
+  img {
+    vertical-align: text-bottom;
+  }
+}
