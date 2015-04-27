@@ -14,8 +14,13 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     = favicon_link_tag "/favicon.ico"
-  %body
-    %header
-      %h1 SASSIENCE
+  %body.Page
+    %header.GlobalHeader.u-pos-r
+      %h1.GlobalHeader-heading.u-pos-r
+        %a.GlobalHeader-logoLink.u-tehi{href: root_path} SASSIENCE
+      %ul.GlobalHeader-descList.u-pos-a.u-t-0.u-r-0
+        %li.GlobalHeader-descItem.u-tehi SASSIENCE（サシエンス）は、CSSのインデントを綺麗にするサービスです。
+        %li.GlobalHeader-descItem.u-tehi 変換技術にはCSSを簡潔に記述できるSass（サス）を利用しています。
+        %li.GlobalHeader-descItem.u-tehi HTMLのインデントを綺麗にするHam Cutlet（ハムカツ）を参考にしました。
     %main
       = yield

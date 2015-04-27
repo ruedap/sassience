@@ -7,3 +7,55 @@
     min-height: 500px;
   }
 }
+
+.Page {
+  background-color: #f6ea8d;
+  background-image: image-url("bg.png");
+  color: #382c03;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+
+.GlobalHeader {
+  margin: 30px auto 25px;
+  max-width: 860px;
+}
+
+.GlobalHeader-heading {
+  display: inline-block;
+  width: 315px;
+  margin: 0;
+}
+
+.GlobalHeader-logoLink {
+  background-image: image-url("logo.png");
+  background-repeat: no-repeat;
+  display: block;
+  height: 90px;
+  width: 315px;
+}
+
+.GlobalHeader-descList {
+  display: inline-block;
+  margin: 0;
+}
+
+.GlobalHeader-descItem {
+  display: block;
+  height: 13px;
+  margin: 0 0 7px 0;
+  width: 450px;
+
+  &:nth-of-type(1) {
+    background: image-url("caption01.png") 0 0;
+  }
+
+  &:nth-of-type(2) {
+    background: image-url("caption02.png") 0 0;
+  }
+
+  &:nth-of-type(3) {
+    background: image-url("caption03.png") 0 0;
+  }
+}
