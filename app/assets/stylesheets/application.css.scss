@@ -85,15 +85,20 @@ html {
      }
  }
 
-.SheetForm-textarea {
-  @include placeholder-color($color-pink);
+%SheetForm-textarea {
+  background-color: #fff;
   border-radius: 20px;
   border-style: none;
-  display: block;
   font-family: $font-family-mono;
   font-size: 13px;
-  height: 460px;
   padding: 20px;
+}
+
+.SheetForm-textarea {
+  @extend %SheetForm-textarea;
+  @include placeholder-color($color-pink);
+  display: block;
+  height: 460px;
   width: 100%;
 
   &:focus {
@@ -142,6 +147,31 @@ html {
 .SheetForm-buttonCaption {
   width: $width-main-narrow;
   text-align: center;
+}
+
+.SheetPreview-code {
+  @extend %SheetForm-textarea;
+  display: block;
+}
+
+.SheetPreview-line {
+  background-color: #fcf3f5;
+  counter-increment: line-number;
+  display: block;
+  margin-bottom: 1px;
+  min-height: 1em;
+
+  &::before {
+    background-color: #f7dfe6;
+    color: $color-red;
+    content: counter(line-number);
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 1em;
+    min-width: 3.6em;
+    padding: 4px 2px;
+    text-align: center;
+  }
 }
 
 .GlobalFooter {

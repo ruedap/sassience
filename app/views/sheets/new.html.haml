@@ -4,5 +4,9 @@
   %h2= @converted_sheet.id
   -# %pre= @converted_sheet.original_code
   %h2= @converted_sheet.converted_type_name
-  %pre= @converted_sheet.converted_code
+  %pre.SheetPreview
+    %code.SheetPreview-code
+      = preserve do
+        - @converted_sheet.converted_code.each_line do |line|
+          %span.SheetPreview-line<>= line
   = render(partial: 'form', locals: { sheet: @sheet, form_modifier: '' })
