@@ -6,6 +6,7 @@ $font-family-mono: Consolas, "Liberation Mono", Courier, "Hiragino Kaku Gothic P
 $width-main: 900px;
 $width-main-narrow: 860px;
 
+$color-yellow: #f6ea8d;
 $color-red: #c00230;
 $color-pink: #df7e96;
 
@@ -22,7 +23,7 @@ html {
 }
 
 .Page {
-  background-color: #f6ea8d;
+  background-color: $color-yellow;
   background-image: image-url("bg.png");
   color: #382c03;
 }
@@ -47,12 +48,26 @@ html {
   width: 315px;
 }
 
-.GlobalHeader-descList {
-  display: inline-block;
+.GlobalHeader-descGroup {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+%GlobalHeader-list {
+  @extend %emma-reli;
+  display: block;
   margin: 0;
+  padding: 0;
+  width: 450px;
+}
+
+.GlobalHeader-descList {
+  @extend %GlobalHeader-list;
 }
 
 .GlobalHeader-descItem {
+  @extend %emma-tehi;
   display: block;
   height: 13px;
   margin: 0 0 7px 0;
@@ -68,6 +83,21 @@ html {
 
   &:nth-of-type(3) {
     background: image-url("caption03.png") 0 0;
+  }
+}
+
+.GlobalHeader-socialButtonList {
+  @extend %GlobalHeader-list;
+  margin-top: 15px;
+}
+
+.GlobalHeader-socialButtonItem {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+
+  a {
+    color: transparent !important;
   }
 }
 

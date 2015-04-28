@@ -18,10 +18,15 @@
     %header.GlobalHeader.u-pos-r
       %h1.GlobalHeader-heading.u-pos-r
         %a.GlobalHeader-logoLink.u-tehi{href: root_path} SASSIENCE
-      %ul.GlobalHeader-descList.u-pos-a.u-t-0.u-r-0
-        %li.GlobalHeader-descItem.u-tehi SASSIENCE（サシエンス）は、CSSのインデントを綺麗にするサービスです。
-        %li.GlobalHeader-descItem.u-tehi 変換技術にはCSSを簡潔に記述できるSass（サス）を利用しています。
-        %li.GlobalHeader-descItem.u-tehi HTMLのインデントを綺麗にするHam Cutlet（ハムカツ）を参考にしました。
+      .GlobalHeader-descGroup
+        %ul.GlobalHeader-descList
+          %li.GlobalHeader-descItem SASSIENCE（サシエンス）は、CSSのインデントを綺麗にするサービスです。
+          %li.GlobalHeader-descItem 変換技術にはCSSを簡潔に記述できるSass（サス）を利用しています。
+          %li.GlobalHeader-descItem HTMLのインデントを綺麗にするHam Cutlet（ハムカツ）を参考にしました。
+        %ul.GlobalHeader-socialButtonList
+          %li.GlobalHeader-socialButtonItem= render('layouts/hatebu')
+          %li.GlobalHeader-socialButtonItem= render('layouts/twitter')
+          %li.GlobalHeader-socialButtonItem= render('layouts/facebook')
     %main.Main
       = yield
     %footer.GlobalFooter
