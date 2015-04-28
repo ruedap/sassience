@@ -214,6 +214,18 @@ html {
   }
 }
 
+.SheetPreview--error {
+  .SheetPreview-code {
+    background-color: #f7f7f7;
+  }
+  .SheetPreview-line {
+    &::before {
+      background-color: #ebebeb;
+      color: #666;
+    }
+  }
+}
+
 .GlobalFooter {
   width: $width-main-narrow;
   margin: 0 auto 30px;
