@@ -85,16 +85,12 @@ html {
      }
  }
 
-%SheetForm-style {
+.SheetForm-textareaOuter {
   background-color: #fff;
   border-radius: 20px;
   font-family: $font-family-mono;
   font-size: 13px;
   padding: 20px;
-}
-
-.SheetForm-textareaOuter {
-  @extend %SheetForm-style;
 }
 
 .SheetForm-textarea {
@@ -103,6 +99,7 @@ html {
   display: block;
   padding: 4px;
   width: 100%;
+
 
   &:focus {
     @include placeholder-color(#fff);
@@ -183,17 +180,26 @@ html {
   background: image-url("created_css_copy_button02.png")
 }
 
+.SheetPreview {
+  overflow-y: hidden;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+
 .SheetPreview-code {
-  @extend %SheetForm-style;
   display: block;
+  overflow-y: auto;
+  font-family: $font-family-mono;
+  font-size: 13px;
+  background-color: #fcf3f5;
 }
 
 .SheetPreview-line {
-  background-color: #fcf3f5;
   counter-increment: line-number;
   display: block;
-  margin-bottom: 1px;
   min-height: 1em;
+  border-bottom: 1px solid #fff;
 
   &::before {
     background-color: #f7dfe6;
