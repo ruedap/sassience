@@ -161,6 +161,8 @@ html {
   padding: 0;
   border: 0;
   appearance: none;
+  transition-property: background-position;
+  transition-duration: 0.4s;
 
   &:hover {
     background-position: 0% 100%;
