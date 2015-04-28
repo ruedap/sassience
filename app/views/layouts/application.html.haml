@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %meta(content="text/html; charset=UTF-8" http-equiv="Content-Type")
+    %meta(property='og:title' content='SASSIENCE ～ 世界が嫉妬するCSSへ')
+    %meta(property='og:url' content='http://sassience.com/')
+    %meta(property='og:image' content='http://sassience.com/images/logo_facebook.png')
+    %meta(property='og:type' content='website')
+    %meta(property='og:description' content='SASSIENCE（サシエンス）は、CSSのインデントを綺麗にするサービスです。')
+    %meta(property='og:site_name' content='SASSIENCE ～ 世界が嫉妬するCSSへ')
+    %meta(property='fb:admins' content='100000124028900')
+    %title SASSIENCE
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = favicon_link_tag "/favicon.ico"
+  %body.Page
+    %header.GlobalHeader.u-pos-r
+      %h1.GlobalHeader-heading.u-pos-r
+        %a.GlobalHeader-logoLink.u-tehi{href: root_path} SASSIENCE
+      .GlobalHeader-descGroup
+        %ul.GlobalHeader-descList
+          %li.GlobalHeader-descItem SASSIENCE（サシエンス）は、CSSのインデントを綺麗にするサービスです。
+          %li.GlobalHeader-descItem 変換技術にはCSSを簡潔に記述できるSass（サス）を利用しています。
+          %li.GlobalHeader-descItem HTMLのインデントを綺麗にするHam Cutlet（ハムカツ）を参考にしました。
+        %ul.GlobalHeader-socialButtonList
+          %li.GlobalHeader-socialButtonItem= render('layouts/hatebu')
+          %li.GlobalHeader-socialButtonItem= render('layouts/twitter')
+          %li.GlobalHeader-socialButtonItem= render('layouts/facebook')
+    %main.Main
+      = yield
+    %footer.GlobalFooter
+      %hr.GlobalFooter-hr
+      %small.GlobalFooter-createdBy.u-ff-s
+        Powered by Heroku, Rails and Sass. Created by 
+        %a(href="http://ruedap.com/") @ruedap

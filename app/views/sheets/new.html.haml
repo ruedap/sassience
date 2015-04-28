@@ -1,0 +1,16 @@
+- unless @converted_sheet
+  = render(partial: 'form', locals: { sheet: @sheet, form_modifier: 'SheetForm--new' })
+- else
+  .SheetResult.u-cf
+    .u-fl-l
+      = render(partial: 'sheet_result', locals: { converted_sheet: @converted_sheet, conversion_error: @conversion_error })
+    .u-fl-r
+      %a(class="SheetResult-button SheetResult-button--type#{@converted_sheet.converted_type} u-tehi" href='javascript:void(0)' alt='CSSをコピーまたは編集' title='CSSをコピーまたは編集') CSSをコピーまたは編集
+  %pre.SheetPreview{ class: @conversion_error ? 'SheetPreview--error' : '' }
+    %code.SheetPreview-code
+      = preserve do
+
+        - code = @conversion_error ? @converted_sheet.original_code : @converted_sheet.converted_code
+        - code.try(:each_line) do |line|
+          %span.SheetPreview-line>= line
+  = render(partial: 'form', locals: { sheet: @sheet, form_modifier: 'SheetForm--converted' })
