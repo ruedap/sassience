@@ -12,8 +12,7 @@ gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.1.1'
 gem 'jbuilder', '2.1.3'
 gem 'emma-css-rails', '0.4.0.0'
-gem 'therubyracer', '0.12.1' # for Heroku
-gem 'rails_12factor', group: :production
+gem 'rails_12factor', group: :production # for Heroku
 
 group :development, :test do
   gem 'rspec-rails', '3.0.2'
