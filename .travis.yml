@@ -4,3 +4,14 @@ cache: bundler
 sudo: false
 before_script:
 - bundle exec rake db:create db:migrate
+deploy:
+  provider: heroku
+  api_key:
+    secure: jfHjXqp8l5SKwl/9LdFPLQewITEQDojnVCq2lXK3MDIHIaasfmSpEJ1N+sD6JyimYigqzT6g7jMocBKAOTMET/ZjlSZtRCd6MxmGlarMTOOLzd14iIqFsmxjfIAsaJG4LmpdbloXCVJFhgBbyGVZJ1MoirD72yPObKQogWtK1ck=
+  app:
+    master: sassience
+    staging: sassience-staging
+  on:
+    repo: ruedap/sassience
+  run:
+    - "rake db:migrate"
