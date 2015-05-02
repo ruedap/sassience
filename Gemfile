@@ -20,6 +20,6 @@ end
 
 group :development do
   gem 'better_errors', '2.1.1'
-  gem 'spring', '1.1.3'
+  gem 'spring', '1.3.5'
   gem 'binding_of_caller', '0.7.2'
 end
