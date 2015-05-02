@@ -15,8 +15,7 @@ gem 'emma-css-rails', '0.4.0.0'
 gem 'rails_12factor', group: :production # for Heroku
 
 group :development, :test do
-  gem 'rspec-rails', '3.0.2'
-  gem 'rspec-core', '3.0.4'
+  gem 'rspec-rails', '3.2.1'
 end
 
 group :development do
