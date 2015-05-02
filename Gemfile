@@ -4,7 +4,7 @@ ruby '2.2.2'
 
 gem 'rails', '4.2.1'
 gem 'pg', '0.18.1'
-gem 'haml-rails', '0.5.3'
+gem 'haml-rails', '0.9.0'
 gem 'sass', '3.4.2'
 gem 'sass-rails', '5.0.0'
 gem 'uglifier', '2.5.3'
