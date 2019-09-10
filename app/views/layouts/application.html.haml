@@ -10,6 +10,7 @@
     %meta(property='og:site_name' content='SASSIENCE ～ 世界が嫉妬するCSSへ')
     %meta(property='fb:admins' content='100000124028900')
     %title SASSIENCE ～ 世界が嫉妬するCSSへ
+    %link(href='https://sassience.com/' rel='canonical')
     = stylesheet_link_tag    "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -32,6 +33,6 @@
     %footer.GlobalFooter
       %hr.GlobalFooter-hr
       %small.GlobalFooter-createdBy.u-ff-s
-        Powered by Heroku, Rails and Sass. Created by 
+        Powered by Heroku, Rails and Sass. Created by
         %a(href="http://ruedap.com/") @ruedap
     = render('layouts/google_analytics')
