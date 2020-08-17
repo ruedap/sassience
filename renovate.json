@@ -2,6 +2,9 @@
   "extends": [
     "config:base"
   ],
+  "enabledManagers": ["npm"],
+  "ignoreDeprecated": true,
+  "timezone": "Asia/Tokyo",
   "patch": {
     "automerge": true
   }
