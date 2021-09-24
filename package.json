@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "firebase-tools": "8.20.0",
-    "i": "0.3.6",
+    "i": "0.3.7",
     "npm": "7.11.0"
   }
 }
